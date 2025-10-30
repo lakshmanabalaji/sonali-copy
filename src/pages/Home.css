@@ -257,3 +257,139 @@ h1 span::selection { background: transparent; color: inherit; }
 .whatsapp-icon:hover {
   transform: scale(1.1);
 }
+
+
+/* =============================
+   About Section
+============================= */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  
+  padding: 100px 70px;
+  background-color: #f5f7fa;
+  color: #162C47;
+  gap: 60px;
+}
+
+.about-left {
+  width: 55%;
+}
+
+.about-left h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: grey;
+
+}
+
+.about-left h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: rgba(22, 44, 71, 1);
+;
+}
+
+.about-left h3 .highlight-text {
+  background: linear-gradient(96.27deg, #162C47 8.25%, rgba(22, 44, 71, 0.5) 80.85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 4rem;
+}
+
+.about-left p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Who We Are section */
+.who-we-are {
+  margin-top: 30px;
+  padding-left: 20px !important;
+  padding-top: 10px;
+  border-radius: 20px;
+  max-width: 250px !important;
+  max-height: 250px !important;
+  height: 250px !important;
+  /* ✨ Gradient background */
+  background: linear-gradient(
+    132.08deg,
+    #162C47 24.83%,
+    rgba(22, 44, 71, 0.6) 115.74%
+  );
+
+  /* Optional: add soft shadow & text color contrast */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+}
+
+.who-we-are h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+/* Know More button */
+.know-more-btn {
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  background: transparent;
+}
+
+.know-more-btn:hover {
+  transform: scale(1.05); /* slightly enlarge on hover */
+}
+
+
+/* Right column (Vision) */
+.about-right {
+  width: 50%;
+  margin-top: 100px;
+}
+
+.about-right h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #003057;
+}
+
+.about-right p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    gap: 40px;
+    padding: 60px 30px;
+  }
+
+  .about-left,
+  .about-right {
+    width: 100%;
+  }
+
+  .about-right {
+    text-align: left;
+  }
+}
