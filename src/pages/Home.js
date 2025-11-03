@@ -15,21 +15,11 @@ import iso45001 from "../images/iso-45001.webp";
 import pureCopper from "../images/pure-copper.png";
 import { FaWhatsapp, FaYoutube, FaFacebook, FaLinkedin } from "react-icons/fa";
 
-const Home = () => {
-  const [showChat, setShowChat] = useState(false);
+export default function Home() {
+  const { loading, error, data } = useApi('http://localhost:5000/api/pages/home');
 
-  return (
-    <>
-      <div className="home-container">
-        <div className="overlay">
-          <h1>
-            Sonali <br /> <span>wires.</span>
-          </h1>
-          <h3>Stronger trust.</h3>
-          <p>
-            Safe, reliable, and innovative copper wiring solutions powering homes,
-            industries & agriculture.
-          </p>
+  if (loading) return <div style={{ padding: 24 }}>Loading…</div>;
+  if (error) return <div style={{ padding: 24, color: 'red' }}>Error: {error}</div>;
 
           <div className="button-group">
             <button className="btn btn-red">
